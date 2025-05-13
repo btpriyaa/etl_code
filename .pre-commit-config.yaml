@@ -3,29 +3,23 @@ repos:
     rev: 24.3.0
     hooks:
       - id: black
-        name: Black Formatter
-        language_version: python3
 
   - repo: https://github.com/pre-commit/mirrors-isort
-    rev: v5.12.0
+    rev: v5.10.1
     hooks:
       - id: isort
-        name: Import Sorter
-        language_version: python3
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.3.3
     hooks:
       - id: ruff
-        name: Ruff Linter
         args: [--fix]
 
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.9.0
     hooks:
       - id: mypy
-        name: Static Type Checker (Pydantic support)
-        args: [--ignore-missing-imports, --strict]
+        args: [--strict]
 
   - repo: local
     hooks:
