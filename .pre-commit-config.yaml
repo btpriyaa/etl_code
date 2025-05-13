@@ -1,0 +1,36 @@
+repos:
+  - repo: https://github.com/psf/black
+    rev: 24.3.0
+    hooks:
+      - id: black
+        name: Black Formatter
+        language_version: python3
+
+  - repo: https://github.com/pre-commit/mirrors-isort
+    rev: v5.12.0
+    hooks:
+      - id: isort
+        name: Import Sorter
+        language_version: python3
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.3.3
+    hooks:
+      - id: ruff
+        name: Ruff Linter
+        args: [--fix]
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.9.0
+    hooks:
+      - id: mypy
+        name: Static Type Checker (Pydantic support)
+        args: [--ignore-missing-imports, --strict]
+
+  - repo: local
+    hooks:
+      - id: run-unit-tests
+        name: Run Unit Tests
+        entry: python scripts/run_tests.py
+        language: system
+        types: [python]
