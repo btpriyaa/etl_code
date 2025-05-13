@@ -2,9 +2,8 @@ from pydantic import BaseModel, FilePath
 from pathlib import Path
 import yaml
 
-
 class LoggingConfig(BaseModel):
-    level: str         # e.g., INFO, DEBUG
+    level: str        # e.g., INFO, DEBUG
     file: Path        # Path to log file
 
 class DBConfig(BaseModel):
