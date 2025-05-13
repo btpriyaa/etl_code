@@ -15,7 +15,7 @@ class Settings(BaseModel):
     logging: LoggingConfig
 
     @classmethod
-    def from_yaml(cls, env: str = "dev") -> "Settings":
+    def from_yaml(cls) -> "Settings":
         config_path = Path(f"config/settings.yaml")
         if not config_path.exists():
             raise FileNotFoundError(f"Config file not found")
