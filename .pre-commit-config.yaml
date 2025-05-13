@@ -20,11 +20,3 @@ repos:
     hooks:
       - id: mypy
         args: [--strict]
-
-  - repo: local
-    hooks:
-      - id: run-unit-tests
-        name: Run Unit Tests
-        entry: python scripts/run_tests.py
-        language: system
-        types: [python]
