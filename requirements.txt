@@ -5,3 +5,4 @@ ruff
 mypy
 pydantic
 pandas
+types-PyYAML
