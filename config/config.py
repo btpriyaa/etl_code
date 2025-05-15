@@ -1,7 +1,13 @@
 from pathlib import Path
 
 import yaml
-from pydantic import BaseModel, FilePath
+from pydantic import BaseModel, DirectoryPath, FilePath
+
+
+class Config(BaseModel):
+    sql_script_path: FilePath
+    csv_folder: DirectoryPath
+    db_path: Path
 
 
 class LoggingConfig(BaseModel):

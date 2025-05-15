@@ -1,6 +1,6 @@
 database:
   schema_file: data/reference/master-reference-sql.sql
-  db_path: data/reference/instruments.db
+  db_path: data/fund.db
 
 logging:
   level: INFO
