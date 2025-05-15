@@ -6,3 +6,5 @@ mypy
 pydantic
 pandas
 types-PyYAML
+pytest
+
